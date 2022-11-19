@@ -1,0 +1,1 @@
+game:GetService("Players").LocalPlayer:Kick("this is not a game we support yet")
