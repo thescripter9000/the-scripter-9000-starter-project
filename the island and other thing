@@ -1,0 +1,26 @@
+if game.PlaceId == 9406987293 then -- Anime War Simulator Clicks
+    loadstring(game:HttpGet("https://pastebin.com/raw/7arza1zZ"))();
+    end
+    if game.PlaceId == 10117667069 then -- Anime Epic Simulator Clicks
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Spencer59/scripyv2/main/anime%20epic%20sim%20main"))();
+    end
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
+    if game.PlaceId == 3213501585 then --Island Royale ffa
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
+    if game.PlaceId == 3678591308 then --Island Royale zonewars
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
+    if game.PlaceId == 5778397818 then --Island Royale zonewars duo
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
+    if game.PlaceId == 3210442546 then --Island Royale tdm
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
+    if game.PlaceId == 6582295389 then --Island Royale box flights solo
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
+    if game.PlaceId == 6699748628 then --Island Royale box fights teams
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
