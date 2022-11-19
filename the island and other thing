@@ -1,9 +1,10 @@
 if game.PlaceId == 9406987293 then -- Anime War Simulator Clicks
-    loadstring(game:HttpGet("https://pastebin.com/raw/7arza1zZ"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/anime%20war%20clicker"))();
     end
     if game.PlaceId == 10117667069 then -- Anime Epic Simulator Clicks
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Spencer59/scripyv2/main/anime%20epic%20sim%20main"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/anime%20epic%20sim%20main"))();
     end
+    if game.PlaceId == 1320174999 then -- island royale normal game
     loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
     end
     if game.PlaceId == 3213501585 then --Island Royale ffa
@@ -23,4 +24,7 @@ if game.PlaceId == 9406987293 then -- Anime War Simulator Clicks
     end
     if game.PlaceId == 6699748628 then --Island Royale box fights teams
     loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/silent%20aim%20for%20normal%20game'))()
+    end
+    if game.PlaceId == 3956818381 then --ninja legends
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/ninja%20legends%20script'))()    
     end
