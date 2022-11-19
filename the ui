@@ -1,0 +1,120 @@
+--made by spen599
+
+-- Instances:
+
+local Clickerscriptui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UIname = Instance.new("TextLabel")
+local toggleUI = Instance.new("TextButton")
+local exitUI = Instance.new("TextButton")
+local UI = Instance.new("TextLabel")
+local toggleUI2 = Instance.new("TextButton")
+local toggleUI3 = Instance.new("TextButton")
+local OPEN = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+Clickerscriptui.Name = "Clickerscriptui"
+Clickerscriptui.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = Clickerscriptui
+Main.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Main.Position = UDim2.new(0.412694156, 0, 0.195786864, 0)
+Main.Size = UDim2.new(0, 320, 0, 490)
+Main.Visible = false
+
+UIname.Name = "UI name"
+UIname.Parent = Main
+UIname.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+UIname.Position = UDim2.new(0.224999994, 0, -0.0877550989, 0)
+UIname.Size = UDim2.new(0, 176, 0, 43)
+UIname.Font = Enum.Font.SourceSans
+UIname.Text = "Vape UI"
+UIname.TextColor3 = Color3.fromRGB(255, 0, 4)
+UIname.TextSize = 19.000
+
+toggleUI.Name = "toggle UI"
+toggleUI.Parent = Main
+toggleUI.BackgroundColor3 = Color3.fromRGB(89, 255, 0)
+toggleUI.Position = UDim2.new(0.146874994, 0, 0.132653058, 0)
+toggleUI.Size = UDim2.new(0, 238, 0, 108)
+toggleUI.Font = Enum.Font.SourceSans
+toggleUI.Text = "Launch Normal Vape UI"
+toggleUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+toggleUI.TextSize = 20.000
+toggleUI.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+exitUI.Name = "exit UI"
+exitUI.Parent = Main
+exitUI.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+exitUI.Position = UDim2.new(0.871874988, 0, -0.067346938, 0)
+exitUI.Size = UDim2.new(0, 41, 0, 33)
+exitUI.Font = Enum.Font.SourceSans
+exitUI.Text = "x"
+exitUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+exitUI.TextSize = 49.000
+exitUI.MouseButton1Down:connect(function()
+	Main.Visible = false
+	OPEN.Visible = true
+end)
+
+UI.Name = "UI"
+UI.Parent = Main
+UI.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+UI.Position = UDim2.new(0.0187500007, 0, 0.0163265299, 0)
+UI.Size = UDim2.new(0, 41, 0, 19)
+UI.Font = Enum.Font.SourceSans
+UI.Text = "UI"
+UI.TextColor3 = Color3.fromRGB(255, 0, 4)
+UI.TextSize = 14.000
+
+toggleUI2.Name = "toggle UI2"
+toggleUI2.Parent = Main
+toggleUI2.BackgroundColor3 = Color3.fromRGB(89, 255, 0)
+toggleUI2.Position = UDim2.new(0.146874994, 0, 0.379591912, 0)
+toggleUI2.Size = UDim2.new(0, 238, 0, 113)
+toggleUI2.Font = Enum.Font.SourceSans
+toggleUI2.Text = "Launch Normal Rise UI"
+toggleUI2.TextColor3 = Color3.fromRGB(0, 0, 0)
+toggleUI2.TextSize = 20.000
+toggleUI2.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Spencer59/scripyv2/main/Normal%20Rise%20UI'))()
+end)
+
+toggleUI3.Name = "toggle UI3"
+toggleUI3.Parent = Main
+toggleUI3.BackgroundColor3 = Color3.fromRGB(89, 255, 0)
+toggleUI3.Position = UDim2.new(0.146874994, 0, 0.640816331, 0)
+toggleUI3.Size = UDim2.new(0, 238, 0, 112)
+toggleUI3.Font = Enum.Font.SourceSans
+toggleUI3.Text = "Launch Modded Rise UI"
+toggleUI3.TextColor3 = Color3.fromRGB(0, 0, 0)
+toggleUI3.TextSize = 20.000
+toggleUI3.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Spencer59/scripyv2/main/Modded%20Rise%20UI'))()
+end)
+
+OPEN.Name = "OPEN"
+OPEN.Parent = Clickerscriptui
+OPEN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPEN.Position = UDim2.new(0.00592357945, 0, 0.0408921912, 0)
+OPEN.Size = UDim2.new(0, 164, 0, 27)
+OPEN.Active = true
+OPEN.Draggable = true
+
+open.Name = "open"
+open.Parent = OPEN
+open.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+open.Size = UDim2.new(0, 164, 0, 27)
+open.Font = Enum.Font.SourceSans
+open.Text = "OPEN SCRIPT"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextSize = 33.000
+open.MouseButton1Down:connect(function()
+	OPEN.Visible = false
+	Main.Visible = true
+end)

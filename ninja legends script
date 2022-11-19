@@ -1,0 +1,133 @@
+-- Ninja Legends --
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "lay.rip",
+	Text = "thank you!",
+	Button1 = "🖤",
+	Duration = 8
+	})
+local Library = loadstring(game:HttpGet("https://sus.michxsus.xyz/ui.lua"))()
+local Window = Library.CreateLib("🖤 lay.rip 🖤 | Ninja Legends", "Serpent")
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+local Settings = Window:NewTab("Settings")
+local SettingSection = Settings:NewSection("Settings")
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local antiAFK = true
+player.Idled:connect(function()
+	if antiAFK then
+		game.VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+		wait(1)
+		game.VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+	end
+end)
+
+-- Main --
+MainSection:NewToggle("auto swing", "swings that fat ass", function(v)
+	getgenv().autoswing = v
+	while true do
+		if not getgenv().autoswing then return end
+		for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v:FindFirstChild("ninjitsuGain") then
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+				break
+			end
+		end
+		local A_1 = "swingKatana"
+		local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+		Event:FireServer(A_1)
+		wait(0.1)
+	end
+end)
+
+MainSection:NewToggle("auto sell", "sells that fat ass", function(v)
+	getgenv().autosell = v
+	while true do
+		if getgenv().autoswing == false then return end
+		game:GetService("Workspace").sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		wait(0.1)
+		game:GetService("Workspace").sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = CFrame.new(0,0,0)
+		wait(0.1)
+	end
+end)
+
+MainSection:NewToggle("auto buy all swords", "buys that sword to fuck you", function(v)
+	getgenv().buyswords = v
+	while true do
+		if not getgenv().buyswords then return end
+		local A_1 = "buyAllSwords"
+		local A_2 = "Inner Peace Island"
+		local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+		Event:FireServer(A_1, A_2)
+		wait(0.5)
+	end
+end)
+
+MainSection:NewToggle("auto buy all belts", "blets", function(v)
+	getgenv().buybelts = v
+	while true do
+		if not getgenv().buybelts then return end
+		local A_1 = "buyAllBelts"
+		local A_2 = "Inner Peace Island"
+		local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+		Event:FireServer(A_1, A_2)
+		wait(0.5)
+	end
+end)
+
+MainSection:NewButton("unlock all islands", "islands", function()
+	local oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	for _,v in pairs(game:GetService("Workspace").islandUnlockParts:GetChildren()) do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+		wait(0.1)
+	end
+	wait(0.1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+end)
+
+MainSection:NewLabel("more aka better shit coming soon")
+
+
+
+-- Player --
+
+PlayerSection:NewSlider("WalkSpeed", "Changes Speed", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+PlayerSection:NewSlider("JumpPower", "Changes Power Of Your Jump", 500, 10, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+PlayerSection:NewSlider("FOV", "Changes FOV", 120, 90, function(s)
+    Workspace.Camera.FieldOfView = s
+end)
+
+PlayerSection:NewSlider("Gravity", "Changes Gravity", 0, 200, function(s)
+    Workspace.Gravity = s
+end)
+
+PlayerSection:NewToggle("infinite jump", "jumps into pussy", function(state)
+	getgenv().InfiniteJump = state
+	game.UserInputService.JumpRequest:connect(function()
+		if not getgenv().InfiniteJump then return end
+		player.Character.Humanoid:ChangeState('Jumping')
+	end)
+end)
+PlayerSection:NewToggle("noclip", "noclips to the backrooms", function(state)
+	getgenv().Noclip = state
+	while true do
+		if not getgenv().Noclip then return end
+		game.RunService.Stepped:wait()
+		for i, v in pairs(player.Character:GetDescendants()) do
+			if v:IsA('BasePart') then
+				v.CanCollide = false
+			end
+		end
+	end
+end)
+
+-- Settings ---
+SettingSection:NewKeybind("ToggleUI", "Toggles", Enum.KeyCode.V, function()
+	Library:ToggleUI()
+end)

@@ -1,0 +1,8 @@
+_G.autotap = true;
+
+spawn(function()
+while _G.autotap == true do
+    workspace.Events.AddClick:FireServer()
+    wait()
+  end
+end)
