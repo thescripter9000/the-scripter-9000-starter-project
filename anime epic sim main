@@ -1,3 +1,3 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/anime%20epic%20clickers%20source'))()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/message%20thing'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/anime%20epic%20clickers%20source'))();
+loadstring(game:HttpGet('https://raw.githubusercontent.com/thescripter9000/the-scripter-9000-starter-project/main/message%20thing'))();
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
